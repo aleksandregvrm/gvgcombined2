@@ -47,6 +47,7 @@ const Wrapper = styled.section`
     border: 0.3px solid rgba(0, 0, 0, 0.25);
     padding: 0.5rem;
     border-radius: 10px;
+    max-height: 225px;
     width: 90%;
   }
   .contact-form textarea {
@@ -54,10 +55,12 @@ const Wrapper = styled.section`
     border: none;
     font-size: 1rem;
     border-radius: 8px;
-    font-weight: 600;
+    font-weight: 300;
+    max-height: ;
     outline: none;
     width: 90%;
     padding-top: 0.2rem;
+    font-family: inherit;
     background: transparent;
     color: var(--primary-black);
   }
@@ -78,7 +81,7 @@ const Wrapper = styled.section`
     z-index: 2;
   }
   .contact-input {
-    font-weight: 600;
+    font-weight: 300;
     height: 1.5rem;
     color: var(--primary-black);
     font-size: 1rem;

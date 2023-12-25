@@ -9,7 +9,7 @@ const Wrapper = styled.section`
     left: 0;
     margin: auto;
     width: 60px;
-    height: 60px;
+    height: 70px;
     scale: 0.2;
     opacity: 0;
     z-index: 0.8;
@@ -91,7 +91,6 @@ const Wrapper = styled.section`
     opacity: 0.9;
   }
   .carousel-container {
-    padding-top: 0.5rem;
     width: 90%;
     margin: 0 auto;
     min-height: 110px;

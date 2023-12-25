@@ -1,8 +1,7 @@
 import styled from "styled-components";
-
 const Wrapper = styled.footer`
   background: var(--primary-black);
-  margin-top: 3rem;
+  margin-top: 2rem;
   .footer-container {
     width: 100%;
     background: var(--primary-black);
@@ -71,26 +70,6 @@ const Wrapper = styled.footer`
       opacity: 1;
     }
   }
-  /* company images */
-  .company-images {
-    margin: 0.5rem auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 0.3rem;
-  }
-  .company-images img {
-    opacity: 0.6;
-    height: 3rem;
-    width: 6.4rem;
-    border: 2px solid transparent;
-    object-fit: contain;
-    padding-left: 0.5rem;
-  }
-  .align-image{
-    margin-right:0.4rem;
-  }
-  /* end */
   .contacts-container {
     display: flex;
     flex-direction: column;
@@ -129,7 +108,7 @@ const Wrapper = styled.footer`
     }
   }
   .animated-contact-text h4{
-    font-weight: 400;
+    font-weight: 300;
   }
   .under-text {
     text-decoration: underline;
@@ -229,9 +208,6 @@ const Wrapper = styled.footer`
       display: flex;
       justify-content: flex-start;
       gap: 1.5rem;
-    }
-    .company-images {
-      display: none;
     }
     .pages-container ul {
       max-height: 140px;

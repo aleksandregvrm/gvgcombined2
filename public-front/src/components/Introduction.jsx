@@ -3,6 +3,8 @@ import {Wrapper} from "../assets/wrappers/IntroductionWrapper";
 import { useSelector } from "react-redux";
 import IntroductionImages from "./IntroductionImages";
 import ProductsCarousel from "./ProductsCarousel";
+import AssociatedCompanies from './AssociatedCompanies';
+import { blackCompanies } from '../utils';
 
 /* introduction components which involves the big Introduction image, the dots to switch up big introduction image and products carousel the images used in the products carousel is determined in the features/menu/menuSlice.jsx(redux) folder */
 
@@ -51,6 +53,7 @@ const Introduction = () => {
           )}
         </div>
         <ProductsCarousel images={carouselImages} atHome={atHome} />
+        <AssociatedCompanies images={blackCompanies}/>
         <div className="introduction-products">
           <NavLink to='/products'>
             <button className='btn products-btn'>{english ? 'Products' : 'პროდუქტები'}</button>

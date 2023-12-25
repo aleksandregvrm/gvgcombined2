@@ -42,7 +42,7 @@ const Wrapper = styled.nav`
     padding: 0.5rem 1rem;
     transition: var(--transition);
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 300;
   }
   .links a:hover {
     background: var(--primary-Company-blue);
@@ -77,6 +77,9 @@ const Wrapper = styled.nav`
       justify-content: space-around;
       width: 700px;
     }
+    .nav-adress a{
+      font-weight: 300;
+    }
     .nav-adress a:hover {
       color: yellow;
     }
@@ -97,7 +100,7 @@ const Wrapper = styled.nav`
     }
     .faq p {
       font-size: 0.9rem;
-      font-weight: 900;
+      font-weight: 300;
       &:hover{
         color: yellow;
         transition: var(--transition);
@@ -120,6 +123,7 @@ const Wrapper = styled.nav`
     }
     .language-text{
       color: var(--primary-white);
+      font-weight: 300;
     }
     .active-language{
       color: var(--primary-Company-red);
@@ -199,6 +203,7 @@ const Wrapper = styled.nav`
     }
     .links a {
       font-size: 1.05rem;
+      font-weight: 300;
       padding: 0;
     }
     .links a:hover {

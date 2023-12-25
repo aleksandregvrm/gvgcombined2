@@ -113,7 +113,6 @@ const Footer = () => {
         </div>
         {/* Copyright and footer img end*/}
         {/* Responsive Associated companies */}
-        <AssociatedCompanies images={whiteCompanies} />
         {/* Responsive Associated companies end */}
       </div>
     </Wrapper>
