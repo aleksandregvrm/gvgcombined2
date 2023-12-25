@@ -1712,6 +1712,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     justify-content: right;
     .pages-container {
       margin: 0;
+      margin-bottom: 2rem;
       justify-content: left;
       padding-right: 4.5rem;
     }

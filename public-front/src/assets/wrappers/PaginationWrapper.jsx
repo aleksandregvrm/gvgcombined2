@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Wrapper = styled.section`
   margin-top: 3rem;
@@ -31,10 +31,10 @@ const Wrapper = styled.section`
     justify-content: right;
     .pages-container {
       margin: 0;
+      margin-bottom: 2rem;
       justify-content: left;
       padding-right: 4.5rem;
     }
   }
 `;
-
 export default Wrapper;
