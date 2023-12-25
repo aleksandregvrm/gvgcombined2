@@ -20,7 +20,7 @@ const SubscribeEmail = () => {
     <div className="subscribe">
       <div className="subscribe-container">
         <form>
-          <div className="subscribe-text ge">
+          <div className="subscribe-text">
             <input
               placeholder={!english ? "მეილი" : "Email..."}
               className="subscribe-input"

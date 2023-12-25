@@ -58,10 +58,14 @@ const Wrapper = styled.section`
   .product {
     width: 90%;
     max-width: 300px;
+    height: 550px;
     border-radius: 1rem;
     background: var(--vending-catalog-blue);
     animation: ${ProductLoader} linear 1.2s;
     color: var(--primary-black);
+  }
+  .service-product{
+    height: 450px;
   }
   .box {
     padding-top: 1rem;
@@ -133,6 +137,7 @@ const Wrapper = styled.section`
     margin-top: 2rem;
     margin-left: 2.5rem;
     margin-bottom: 2rem;
+    margin-right: 1rem;
   }
   /* end */
   @media screen and (min-width: 980px) {

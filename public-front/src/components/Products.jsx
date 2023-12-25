@@ -31,7 +31,12 @@ const Products = () => {
         {products.map((product) => {
           const { name, image, _id, category } = product;
           return (
-            <article key={_id} className="product">
+            <article
+              key={_id}
+              className={
+                category === "service" ? "product service-product" : "product"
+              }
+            >
               <div className="box">
                 <div className="image-container">
                   <img srcSet={image} alt={name} />
@@ -40,7 +45,7 @@ const Products = () => {
                     onClick={() => {
                       dispatch(setBackgroundIsActive());
                       dispatch(setActiveProduct(product));
-                      detailsEvent(category,name);
+                      detailsEvent(category, name);
                     }}
                   >
                     {!english ? "დეტალები..." : "Details..."}

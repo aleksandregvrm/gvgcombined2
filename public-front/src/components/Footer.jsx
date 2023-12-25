@@ -108,7 +108,7 @@ const Footer = () => {
             <img srcSet={footerIMG} alt="" />
           </div>
           <div className="footer-copy-text">
-            <h5>&copy; {currentYear} Georgian Vending Group</h5>
+            <h4>&copy; {currentYear} Georgian Vending Group</h4>
           </div>
         </div>
         {/* Copyright and footer img end*/}

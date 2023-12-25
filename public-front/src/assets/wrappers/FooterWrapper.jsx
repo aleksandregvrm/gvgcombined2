@@ -1,7 +1,7 @@
 import styled from "styled-components";
 const Wrapper = styled.footer`
   background: var(--primary-black);
-  margin-top: 2rem;
+  margin-top: 3.5rem;
   .footer-container {
     width: 100%;
     background: var(--primary-black);
@@ -18,10 +18,6 @@ const Wrapper = styled.footer`
     max-width: 1260px;
     margin: 0 auto;
     gap: 1rem;
-  }
-  h5 {
-    color: var(--primary-white);
-    font-weight:300;
   }
   h4{
     color: var(--primary-white);
@@ -50,6 +46,7 @@ const Wrapper = styled.footer`
     font-size: 1rem;
     padding-left: 0.1rem;
     outline: none;
+    font-family: var(font-family);
     background: none;
     color: var(--primary-white);
   }
