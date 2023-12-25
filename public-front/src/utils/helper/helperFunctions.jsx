@@ -1,7 +1,7 @@
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const productionUrl = "http://localhost:5002/api/v1";
+const productionUrl = "/api/v1";
 
 export const customFetch = axios.create({
   baseURL: productionUrl,

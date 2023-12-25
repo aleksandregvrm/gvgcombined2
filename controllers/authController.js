@@ -73,7 +73,7 @@ const register = async (req, res) => {
     role,
     verificationToken,
   });
-  const origin = "https://gvgcombined.onrender.com";
+  const origin = "https://gvgcombined2.onrender.com";
   await sendVerificationEmail({
     name: user.name,
     email: user.email,
