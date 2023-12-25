@@ -1,4 +1,4 @@
-import styled,{keyframes} from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const Wrapper = styled.section`
   .introduction-img {
@@ -46,6 +46,7 @@ export const Wrapper = styled.section`
     padding: 1rem 1.5rem;
     border-radius: 0;
     width: 100vw;
+    color: var(--primary-black);
   }
   /* black company images */
   .company-images {
@@ -88,7 +89,7 @@ export const Wrapper = styled.section`
       min-height: 550px;
       height: calc(100vh - 148px);
     }
-    .company-images{
+    .company-images {
       display: none;
     }
   }
@@ -103,7 +104,7 @@ const loadingAnimationImage = keyframes`
   100%{
     opacity: 1;
   }
-`
+`;
 export const AnimatedImage = styled.img`
-  animation:${loadingAnimationImage} linear 1.2s;
-`
+  animation: ${loadingAnimationImage} linear 1.2s;
+`;
