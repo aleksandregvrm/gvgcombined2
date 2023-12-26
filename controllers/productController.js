@@ -175,7 +175,6 @@ const getInstagram = async (req, res) => {
     });
   }
 };
-
 module.exports = {
   getAllProducts,
   createProduct,

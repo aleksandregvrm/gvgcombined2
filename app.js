@@ -35,6 +35,7 @@ const notFoundMiddleware = require("./middleware/notFound");
 const authRouter = require("./routes/authRoutes");
 const productsRouter = require("./routes/productRoutes");
 const userRouter = require("./routes/userRoutes");
+const aboutRouter = require("./routes/aboutRoutes");
 // --
 
 const limiter = rateLimiter({
@@ -57,6 +58,7 @@ app.use(fileUpload({ useTempFiles: true }));
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/products", productsRouter);
 app.use("/api/v1/user", userRouter);
+app.use("/api/v1/about", aboutRouter);
 
 app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./public-front/dist", "index.html"));
