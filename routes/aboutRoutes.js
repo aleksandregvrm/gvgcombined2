@@ -7,7 +7,7 @@ const {
 } = require("../controllers/aboutController");
 const authenticateUser = require("../middleware/authentication");
 
-router.route("/").post(authenticateUser, setAboutStats).get(getAboutStats);
+router.route("/").post(setAboutStats).get(getAboutStats);
 router.route("/:id").patch(editAboutStats);
 
 module.exports = router;
