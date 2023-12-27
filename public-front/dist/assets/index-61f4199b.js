@@ -1790,7 +1790,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   .instagram-header h2 {
     color: var(--primary-Company-red);
     font-weight: 900;
-    font-size: 2.35rem;
+    font-size: 2rem;
   }
   @media screen and (min-width: 980px) {
     margin-top: 0rem;
@@ -1799,6 +1799,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       justify-content: space-between;
       align-items: center;
       width: 80%;
+    }
+    .instagram-header h2{
+      font-size: 2.35rem;
     }
     .instagram-images-container {
       gap: 1rem;
