@@ -2661,8 +2661,8 @@ width: 90%;
 `,gP=()=>{const{search:e,productsType:t,page:n}=Q(i=>i.admin),r=ce();return k.useEffect(()=>{r(Ys()),r(qa())},[e,t,n]),f.jsx(hP,{children:f.jsxs("section",{className:"all-products-section",children:[f.jsx(I8,{}),f.jsx(M8,{}),f.jsx(z8,{}),f.jsx(D8,{}),f.jsx(U8,{}),f.jsx(V8,{})]})})},vP=qe.main`
   min-height: 800px;
   padding: 1rem;
-  padding-bottom: 3rem;
-  margin-bottom: -3rem;
+  padding-bottom: 2rem;
+  margin-bottom: -3.5rem;
   background: var(--clr-grey-200);
   .questions-section{
     padding: 2rem 0;
