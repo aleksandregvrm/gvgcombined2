@@ -74,7 +74,7 @@ const Wrapper = styled.article`
   .instagram-header h2 {
     color: var(--primary-Company-red);
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
   @media screen and (min-width: 980px) {
     margin-top: 0rem;
