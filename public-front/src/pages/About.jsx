@@ -3,12 +3,14 @@ import {useDispatch, useSelector} from 'react-redux';
 import Wrapper from "../assets/wrappers/AboutWrapper";
 import AboutPic from "../assets/images/aboutpic.png";
 import { fetchInstagramProducts } from "../features/products/productsSlice";
-import {InstagramFeed} from '../components';
+import { getAboutStats } from "../features/menu/menuSlice";
+import {InstagramFeed,AboutStats} from '../components';
 const About = () => {
   const {english} = useSelector((store)=>store.menu)
   const dispatch = useDispatch();
   useEffect(()=>{
     dispatch(fetchInstagramProducts());
+    dispatch(getAboutStats());
   },[])
   return (
     <Wrapper>
@@ -54,39 +56,7 @@ const About = () => {
           <img srcSet={AboutPic} alt="" />
         </div>
       </div>
-      <div className="about-stats ge">
-        <div className="info">
-          <h1 className="big">450</h1>
-          {!english ? (
-            <span>
-              <h4>- მდე </h4> <h2>აპარატი</h2>
-            </span>
-          ) : (
-            <h2>Machines</h2>
-          )}
-          <div className="underline"></div>
-        </div>
-        <div className="info">
-          <h1 className="big">180</h1>
-          {!english ? (
-            <span>
-              <h4>- მდე </h4> <h2>პარტნიორი</h2>
-            </span>
-          ) : (
-            <h2>Partners</h2>
-          )}
-          <div className="underline"></div>
-        </div>
-        <div className="info">
-          <h1 className="big">6</h1>
-          {!english ?
-          <span>
-            <h2>ქალაქი</h2>
-          </span> : <h2>Cities</h2>
-          }
-          <div className="underline"></div>
-        </div>
-      </div>
+      <AboutStats/>
       <InstagramFeed />
     </Wrapper>
   );

@@ -15,11 +15,11 @@ const InstagramFeed = () => {
       </Wrapper>
     );
   }
-  if (instagramProducts.length < 1 || instagramError) {
+  if ( instagramError) {
     return (
       <Wrapper>
         <div className="error-instagram-container">
-          <h3>#geovending.ge</h3>
+          <h3>#georgianvendinggroup</h3>
           <Link
             target="_blank"
             to="https://www.instagram.com/georgianvendinggroup/"
@@ -35,7 +35,7 @@ const InstagramFeed = () => {
     <Wrapper>
       <div className="instagram-images-container">
         <div className="instagram-header">
-          <h2>#geovending.ge</h2>
+          <h2>#georgianvendinggroup</h2>
           <Link
             target="_blank"
             to="https://www.instagram.com/georgianvendinggroup/"

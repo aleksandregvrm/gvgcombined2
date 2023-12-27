@@ -146,6 +146,36 @@ const deleteSubscribedEmail = createAsyncThunk(
     }
   }
 );
+const editAboutStats = createAsyncThunk(
+  "adminSlice/editAboutStats",
+  async ({ machines,partners,cities,id }) => {
+    try {
+      const response = await customFetch.patch(
+        `/about/${id}`,{machines,partners,cities}
+      );
+      toastStyles(true, "About Stats edited");
+    } catch (error) {
+      toastStyles(false, "Error with editing About Stats");
+      throw error;
+    }
+  }
+);
+const setAboutStats = createAsyncThunk(
+  "adminSlice/setAboutStats",
+  async ({ machines, partners, cities, }) => {
+    try {
+      const response = await customFetch.post(`/about`, {
+        machines,
+        partners,
+        cities,
+      });
+      toastStyles(true, "About Stats added");
+    } catch (error) {
+      toastStyles(false, "Error with adding stats");
+      throw error;
+    }
+  }
+);
 const initialEditingInfo = {
   name: "",
   category: "",
@@ -305,5 +335,7 @@ export {
   deleteProduct,
   getAllSubscribedEmails,
   deleteSubscribedEmail,
+  editAboutStats,
+  setAboutStats
 };
 export default adminSlice.reducer;

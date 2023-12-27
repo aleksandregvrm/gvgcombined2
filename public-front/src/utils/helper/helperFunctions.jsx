@@ -27,13 +27,17 @@ export const toastStyles = ( status,text ) => {
       style: {
         borderRadius: "20px",
         boxShadow: "0 4px 5px rgba(0, 0, 0, 0.6)",
+        fontWeight: "300",
+        fontFamily:"inherit"
       },
     });
   }
   return toast.error(text, {
     style: {
       borderRadius: "20px",
-      boxShadow: "0 4px 5px rgba(0, 0, 0, 0.6)",
+      boxShadow: "0 4px 5px rgba(86, 44, 44, 0.6)",
+      fontWeight:"300",
+      fontFamily:"inherit"
     },
   });
 };

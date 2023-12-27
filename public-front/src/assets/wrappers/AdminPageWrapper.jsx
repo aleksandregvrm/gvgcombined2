@@ -120,5 +120,20 @@ const Wrapper = styled.main`
   .delete-email button {
     background: #d54d4d;
   }
+  .about-admin {
+    padding: 1rem;
+    height: 570px;
+    background: var(--clr-grey-200);
+  }
+  .about-stats{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .about-btn{
+    margin-top: 1rem;
+  }
 `;
 export default Wrapper;

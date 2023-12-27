@@ -21,4 +21,6 @@ import GetAllEmails from "./GetAllEmails";
 import SingleQuestion from "./SingleQuestion";
 import LanguageChange from "./LanguageChange";
 import DeleteEmail from "./DeleteEmail";
-export {Navbar,Loading,Footer,Introduction,ProductCategories,Tags,Products,AssociatedCompanies,SingleProduct,Pagination,SliderDots,ContactsForm,DownloadCatalog,ContactInfo,InstagramFeed,LoginForm,AllProductsAd,FilterProductsAd,ProductEditing,GetAllEmails,DeleteEmail,SingleQuestion,LanguageChange};
+import AboutStats from "./AboutStats";
+import AboutControls from "./AboutControls";
+export {Navbar,Loading,Footer,Introduction,ProductCategories,Tags,Products,AssociatedCompanies,SingleProduct,Pagination,SliderDots,ContactsForm,DownloadCatalog,ContactInfo,InstagramFeed,LoginForm,AllProductsAd,FilterProductsAd,ProductEditing,GetAllEmails,DeleteEmail,SingleQuestion,LanguageChange,AboutStats,AboutControls};

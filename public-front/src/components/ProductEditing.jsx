@@ -32,7 +32,6 @@ const ProductEditing = () => {
       ...editingInfo
     }));
   }, [editing]);
-
   const imageHandler = (e) => {
     setProductValues((prevValues) => ({
       ...prevValues,
