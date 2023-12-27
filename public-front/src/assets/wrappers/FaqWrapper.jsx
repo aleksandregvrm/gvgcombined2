@@ -3,8 +3,8 @@ import styled from "styled-components";
 const Wrapper = styled.main`
   min-height: 800px;
   padding: 1rem;
-  padding-bottom: 2rem;
-  margin-bottom: -3.5rem;
+  padding-bottom: 3rem;
+  margin-bottom: -3rem;
   background: var(--clr-grey-200);
   .questions-section{
     padding: 2rem 0;

@@ -6,6 +6,9 @@ export const Wrapper = styled.section`
     height: 100%;
     object-fit: contain;
   }
+  .introduction-img-btn{
+    display: none;
+  }
   .dots-container {
     margin-top: 1rem;
     display: flex;
@@ -88,8 +91,25 @@ export const Wrapper = styled.section`
     .img-container {
       min-height: 550px;
       height: calc(100vh - 148px);
+      position: relative;
+      &:hover .introduction-img-btn{
+        opacity: 0.75;
+      }
     }
-    .company-images{
+    .introduction-img-btn {
+      background: var(--primary-white);
+      padding: 1rem;
+      position: absolute;
+      top:50%;
+      left: 50%;
+      display: inline-block;
+      transform: translate(-50%, -50%);
+      &:hover{
+        background: var(--primary-Company-red);
+      }
+      opacity: 0;
+    }
+    .company-images {
       display: none;
     }
   }

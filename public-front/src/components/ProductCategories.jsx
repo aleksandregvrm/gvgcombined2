@@ -19,7 +19,7 @@ const items = [
   },
   {
     name: "Snacks and ingredients",
-    nameGe: 'სნექის აპარატები',
+    nameGe: 'ხემსი',
     url: snacks,
     to: "snacks-and-ingredients",
   },
