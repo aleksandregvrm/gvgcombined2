@@ -10,15 +10,6 @@ const HomeLayout = () => {
     useEffect(() => {
       dispatch(showMe());
     }, []);
-    if(isLoading){
-      <>
-        <Navbar />
-        <section className="section-center">
-          <Loading/>
-        </section>
-        <Footer />
-      </>;
-    }
   return (
     <>
       <Navbar />

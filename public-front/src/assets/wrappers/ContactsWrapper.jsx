@@ -131,8 +131,8 @@ const Wrapper = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 80px;
-    min-height: 50px;
+    min-width: 70px;
+    min-height: 40px;
     color: var(--primary-white);
     text-align: center;
     background: var(--primary-black);

@@ -15,6 +15,7 @@ const initialState = {
   isSearchBarOpen: false,
   aboutStats:{machines:'',partners:'',cities:'',id:''},
   aboutStatsIsLoading: false,
+  aboutBackgroundIsActive:false,
   isSubmenuOpen: false,
   activeImageIndex: 0,
   images: imagesArray,
@@ -25,7 +26,7 @@ const initialState = {
   submenuPages: [
     { name: "vending", nameGe:'ვენდინგი', to: "products/vending" },
     { name: "coffee", nameGe: 'ყავა', to: "products/coffee" },
-    { name: 'snack', nameGe: 'სნექი', to:'products/snacks-and-ingredients'}
+    { name: 'snack', nameGe: 'ხემსი', to:'products/snacks-and-ingredients'}
   ],
   editingInfo: {},
 };
@@ -63,6 +64,12 @@ const menuSlice = createSlice({
     },
     changeLanguage: (state) => {
       return {...state, english: !state.english}
+    },
+    setAboutBackgroundIsActive : (state) => {
+      return {...state, aboutBackgroundIsActive:true};
+    },
+    closeAboutBackgroundIsActive : (state) => {
+      return {...state, aboutBackgroundIsActive:false};
     }
   },
   extraReducers: (builder) => {
@@ -95,7 +102,9 @@ export const {
   setSubmenuOpen,
   hideSubmenu,
   setActiveImageIndex,
-  changeLanguage
+  changeLanguage,
+  setAboutBackgroundIsActive,
+  closeAboutBackgroundIsActive,
 } = menuSlice.actions;
 export { getAboutStats };
 export default menuSlice.reducer;

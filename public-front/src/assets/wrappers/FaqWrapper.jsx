@@ -4,7 +4,7 @@ const Wrapper = styled.main`
   min-height: 800px;
   padding: 1rem;
   padding-bottom: 3rem;
-  margin-bottom: -3rem;
+  margin-bottom: -3.5rem;
   background: var(--clr-grey-200);
   .questions-section{
     padding: 2rem 0;
