@@ -2,12 +2,12 @@ import { useEffect } from "react";
 import {useDispatch,useSelector } from "react-redux";
 import { AnimatedImage } from "../assets/wrappers/IntroductionWrapper";
 import SliderDots from './SliderDots'
-import { setActiveImageIndex } from "../features/menu/menuSlice";
+import { setActiveImageIndex,setAboutBackgroundIsActive } from "../features/menu/menuSlice";
 
 /* this components is located inside the introduction component, and it uses useEffect to change the main image every 5,5 seconds, all the controllers are available in the feature/menu folders menu.jsx(redux) file  */
 
 const IntroductionImages = () => {
-  const {images,activeImageIndex,english} = useSelector((store)=>store.menu);
+  const {images,activeImageIndex} = useSelector((store)=>store.menu);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -26,13 +26,11 @@ const IntroductionImages = () => {
           alt="Main Image"
           className="introduction-img"
         />
-        <button className="btn introduction-img-btn">
-          {!english ? "მეტი ინფორმაცია..." : "More Information..."}
+        <button className="btn introduction-img-btn" onClick={()=>dispatch(setAboutBackgroundIsActive())}>
         </button>
       </div>
       <SliderDots />
     </div>
   );
 };
-
 export default IntroductionImages;

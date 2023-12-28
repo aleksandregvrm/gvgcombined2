@@ -5,6 +5,7 @@ import IntroductionImages from "./IntroductionImages";
 import ProductsCarousel from "./ProductsCarousel";
 import AssociatedCompanies from './AssociatedCompanies';
 import { blackCompanies } from '../utils';
+import HomepageAbout from "./HomepageAbout";
 
 /* introduction components which involves the big Introduction image, the dots to switch up big introduction image and products carousel the images used in the products carousel is determined in the features/menu/menuSlice.jsx(redux) folder */
 
@@ -15,6 +16,7 @@ const Introduction = () => {
     <Wrapper>
       <div className="introduction">
         <IntroductionImages />
+        <HomepageAbout/>
         <div className="introduction-text">
           {!english ? (
             <p>
@@ -24,10 +26,10 @@ const Introduction = () => {
               ყოველდღიური კომფორტის ხელმისაწვდომობის მიზნით ადგილობრივ
               ბიზნესებს, კერძო და სახელმწიფო ოფისებს, მივაწოდოთ საუკეთესო
               ხარისხის, მრავალფუნქციური, მათ ბიზნესზე და საქმისწარმოებაზე
-              მორგებული სავაჭრო აპარატები. ჩვენ ვეხმარებით პარტნიორებს
-              ისეთი ცოცხალი კუთხეების მოწყობაში, რომლებიც ქმნის პოზიტიურ
-              კავშირებს, ამყარებს და აძლიერებს კომფორტს, ზრდის პროდუქტიულობას და
-              იწვევს კმაყოფილებას <br /> ჩვენ ვამაყობთ რომ შეგვიძლია სწრაფად და
+              მორგებული სავაჭრო აპარატები. ჩვენ ვეხმარებით პარტნიორებს ისეთი
+              ცოცხალი კუთხეების მოწყობაში, რომლებიც ქმნის პოზიტიურ კავშირებს,
+              ამყარებს და აძლიერებს კომფორტს, ზრდის პროდუქტიულობას და იწვევს
+              კმაყოფილებას <br /> ჩვენ ვამაყობთ რომ შეგვიძლია სწრაფად და
               მარტივად მივაწოდოთ საკვები, სასმელი და სხვა დაკავშირებული
               კატეგორიების პროდუქტი ნებისმიერ სექტორს, რაც ნიშნავს რომ შეგვიძლია
               მოვუაროთ როგორც მსხვილ, ისე მცირე ორგანიზაციებს.
@@ -53,10 +55,12 @@ const Introduction = () => {
           )}
         </div>
         <ProductsCarousel images={carouselImages} atHome={atHome} />
-        <AssociatedCompanies images={blackCompanies}/>
+        <AssociatedCompanies images={blackCompanies} />
         <div className="introduction-products">
-          <NavLink to='/products'>
-            <button className='btn products-btn'>{english ? 'Products' : 'პროდუქტები'}</button>
+          <NavLink to="/products" className="products-link">
+            <button className="products-btn btn">
+              {english ? "Products" : "პროდუქტები"}
+            </button>
           </NavLink>
         </div>
       </div>

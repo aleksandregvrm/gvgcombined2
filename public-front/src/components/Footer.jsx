@@ -11,6 +11,7 @@ import {
   faFacebook,
   faLinkedin,
   faInstagram,
+  faYoutube
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRightToBracket,faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
@@ -37,6 +38,15 @@ const Footer = () => {
         <div className="contacts-container">
           <ContactInfo forContacts={forContacts} />
           <div className="logos-container">
+            <div className="logo">
+              <Link
+                to="https://www.youtube.com/watch?v=EDK9KOfknTw"
+                className="logo-icon"
+                target="_blank"
+              >
+                <FontAwesomeIcon icon={faYoutube} />
+              </Link>
+            </div>
             <div className="logo">
               <Link
                 to="https://www.facebook.com/geovending"

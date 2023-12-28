@@ -12,6 +12,7 @@ import {
   FaFacebook,
   FaBars,
   FaLinkedin,
+  FaYoutube
 } from "react-icons/fa";
 import { toggleNavbar } from "../features/menu/menuSlice";
 import { links } from "../utils";
@@ -121,6 +122,14 @@ const Navbar = () => {
         </div>
         <div className="nav-icons">
           <LanguageChange />
+          <span>
+            <Link
+              target="_blank"
+              to="https://www.youtube.com/watch?v=EDK9KOfknTw"
+            >
+              <FaYoutube className="social-icon"/>
+            </Link>
+          </span>
           <span>
             <Link target="_blank" to="https://www.facebook.com/geovending">
               <FaFacebook className="social-icon" />
