@@ -4,11 +4,13 @@ const Wrapper = styled.section`
     top: 0;
     width: 100%;
     min-height: 100vh;
+    width: 100vw;
     position: fixed;
     visibility: hidden;
     color: var(--primary-white);
     z-index: 100;
     .background {
+      padding-top: 4rem;
       position: absolute;
       background: var(--primary-black);
       height: 100%;
@@ -42,13 +44,12 @@ const Wrapper = styled.section`
     }
     .image-container {
       padding-left: 1rem;
+      padding-top: 2rem;
       width: 100%;
       min-height: 500px;
-      max-width: 1200px;
     }
     .image-container img {
-      max-width: 1200px;
-      object-fit: contain;
+      object-fit: cover;
     }
     .text-container {
       width: 100%;

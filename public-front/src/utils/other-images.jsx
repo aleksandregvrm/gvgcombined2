@@ -28,25 +28,25 @@ import money8 from "../assets/money-images/10-lari.png";
 import cardReader from "../assets/money-images/card-reader.png";
 
 export const snackImages = [
+  snack11,
+  snack6,
   snack1,
   snack2,
   snack3,
   snack4,
-  snack5,
-  snack6,
   snack7,
   snack8,
   snack9,
   snack10,
-  snack11,
   question,
+  snack5,
   snack12,
   snack13,
   snack14,
-  snack15,
+  snack19,
   snack17,
   snack18,
-  snack19
+  snack15
 ];
 
 export const payImages = [money1,money2,money3,money4,money5,money6,money7,money8,cardReader]

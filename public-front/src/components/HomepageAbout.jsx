@@ -18,9 +18,9 @@ const HomepageAbout = () => {
             dispatch(closeAboutBackgroundIsActive());
           }}
         />
-        <div className="image-container">
+        {/* <div className="image-container">
           <img srcSet={AboutPic} alt="" />
-        </div>
+        </div> */}
         <div className="text-container">
           {!english ? (
             <p>

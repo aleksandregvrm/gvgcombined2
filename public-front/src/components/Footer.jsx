@@ -6,6 +6,7 @@ import {useSelector,useDispatch} from 'react-redux';
 import footerIMG from "../assets/other-images/gvg-footer-logo.png";
 import ContactInfo from "./ContactInfo";
 import SubscribeEmail from "./SubscribeEmail";
+import LanguageChange from "./LanguageChange";
 import { links } from "../utils";
 import {
   faFacebook,
@@ -44,7 +45,7 @@ const Footer = () => {
                 className="logo-icon"
                 target="_blank"
               >
-                <FontAwesomeIcon icon={faYoutube} />
+                <FontAwesomeIcon icon={faYoutube}/>
               </Link>
             </div>
             <div className="logo">
@@ -65,7 +66,8 @@ const Footer = () => {
                 <FontAwesomeIcon icon={faInstagram} />
               </Link>
             </div>
-            <div className="logo">
+              <LanguageChange/>
+            <div>
               <Link
                 to="https://ge.linkedin.com/in/georgian-vending-group-9a3126291"
                 className="logo-icon"

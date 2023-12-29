@@ -176,6 +176,19 @@ const Wrapper = styled.footer`
       color: yellow;
     }
   }
+  .language{
+    cursor: pointer;
+    display: flex;
+    font-size: 1rem;
+    align-self: center;
+    color: white;
+  }
+  .language-text{
+    color:var(--primary-white)
+  }
+  .active-language{
+    color: var(--primary-Company-red);
+  }
   .authorization{
     display: none;
   }
