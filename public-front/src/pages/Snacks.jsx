@@ -7,8 +7,8 @@ import { snackPageEvent } from "../facebook-pixel/FacebookFunctions";
 
 const productsType = "snacks-and-ingredients";
 const tagsList = [
-  { id: 1, tag: "newest", tagGe: "უახლესი" },
-  { id: 2, tag: "oldest", tagGe: "უძველესი" },
+  { id: 1, tag: "newest", tagGe: "ახალი" },
+  { id: 2, tag: "oldest", tagGe: "ძველი" },
 ];
 const Snacks = () => {
   const { isLoading, sort, page, search } = useSelector(

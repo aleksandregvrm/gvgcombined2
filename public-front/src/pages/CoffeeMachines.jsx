@@ -6,7 +6,7 @@ import { Products, Tags, Loading } from "../components";
 import { coffeePageEvent } from "../facebook-pixel/FacebookFunctions";
 
 const productsType = "coffee";
-const tagsList =[ {id:1,tag:'newest',tagGe:'უახლესი'},{id:2,tag:'oldest', tagGe:'უძველესი'}];
+const tagsList =[ {id:1,tag:'newest',tagGe:'ახალი'},{id:2,tag:'oldest', tagGe:'ძველი'}];
 
 const CoffeeMachines = () => {
   const { isLoading, sort, search, page } = useSelector((store) => store.products);
