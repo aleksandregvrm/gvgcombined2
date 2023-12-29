@@ -66,7 +66,6 @@ const Footer = () => {
                 <FontAwesomeIcon icon={faInstagram} />
               </Link>
             </div>
-              <LanguageChange/>
             <div>
               <Link
                 to="https://ge.linkedin.com/in/georgian-vending-group-9a3126291"

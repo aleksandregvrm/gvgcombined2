@@ -6,8 +6,8 @@ const LanguageChange = () => {
     const dispatch = useDispatch();
   return (
     <span className="language" onClick={() => dispatch(changeLanguage())}>
-      <h5 className={`${!english && "active-language"} language-text`}>ქარ</h5>|
-      <h5 className={`${english && "active-language"} language-text`}>Eng</h5>
+      <h5 className={`${!english && "active-language"} language-text`}>GEO</h5>|
+      <h5 className={`${english && "active-language"} language-text`}>ENG</h5>
     </span>
   );
 }

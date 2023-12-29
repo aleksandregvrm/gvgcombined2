@@ -121,7 +121,6 @@ const Navbar = () => {
           </span>
         </div>
         <div className="nav-icons">
-          {/* <LanguageChange /> */}
           <span>
             <Link
               target="_blank"
@@ -151,6 +150,7 @@ const Navbar = () => {
               <FaLinkedin className="social-icon" />
             </Link>
           </span>
+          <LanguageChange />
         </div>
       </div>
       {/* Nav Contacts for the bigger screen end */}

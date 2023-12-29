@@ -20,6 +20,7 @@ const Wrapper = styled.section`
       overflow-y: scroll;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       padding: 2rem;
     }
     .close-button {

@@ -86,7 +86,7 @@ const Wrapper = styled.nav`
     /* end */
     /* Social icons and faq*/
     .nav-icons {
-      width: 160px;
+      width: 185px;
       height: 1.5rem;
       display: flex;
       justify-content: space-between;
@@ -120,6 +120,7 @@ const Wrapper = styled.nav`
     .language{ 
       display: flex;
       cursor: pointer;
+      margin-left: 0.5rem;
     }
     .language-text{
       color: var(--primary-white);
@@ -138,7 +139,6 @@ const Wrapper = styled.nav`
       justify-content: center;
       height: 2rem;
       max-width: 25%;
-      /* border: 2px solid red; */
     }
     .search-bar button {
       margin-left: 1rem;
