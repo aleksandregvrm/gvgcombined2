@@ -21,6 +21,6 @@ router.post(
 );
 router.get("/subscribed-emails",authenticateUser,getAllSubscribedEmails);
 router.delete("/subscribed-emails/:email",authenticateUser,deleteSubscribedEmail);
-router.post("/user-message", createUserLimiter(fifteenMinutes, 2), sendUserMessage);∂
+router.post("/user-message", createUserLimiter(fifteenMinutes, 2), sendUserMessage);
 
 module.exports = router;
