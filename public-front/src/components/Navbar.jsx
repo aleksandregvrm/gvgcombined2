@@ -121,7 +121,7 @@ const Navbar = () => {
           </span>
         </div>
         <div className="nav-icons">
-          <LanguageChange />
+          {/* <LanguageChange /> */}
           <span>
             <Link
               target="_blank"
