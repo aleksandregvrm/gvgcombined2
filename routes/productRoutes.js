@@ -17,11 +17,11 @@ const twelveHours = 1000 * 60 * 60 * 12;
 
 router.route("/").post(authenticateUser,createProduct).get(getAllProducts);
 router.route("/adminProducts").get(authenticateUser,getAllProductsAdmin);
-router.route("/uploadImage").post(authenticateUser,uploadImage);
+router.route("/uploadImage").post(authenticateUser,uploadImage);∂
 router.route("/instagram").get(getInstagram);
 router
   .route("/:id")
-  .post(createUserLimiter(twelveHours,3),submitLikeProduct)
+  .post(createUserLimiter(twelveHours,2),submitLikeProduct)
   .patch(authenticateUser,updateProduct)
   .delete(authenticateUser,deleteProduct);
 
