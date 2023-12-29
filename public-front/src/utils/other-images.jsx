@@ -42,11 +42,11 @@ export const snackImages = [
   snack5,
   snack12,
   snack13,
-  snack14,
   snack19,
   snack17,
   snack18,
-  snack15
+  snack14,
+  snack15,
 ];
 
 export const payImages = [money1,money2,money3,money4,money5,money6,money7,money8,cardReader]

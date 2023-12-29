@@ -211,13 +211,13 @@ const Wrapper = styled.footer`
     margin-top: 1rem;
     .logos-container {
       opacity: 0.9;
-      width: 70%;
+      width: 180px;
       margin-top: 1rem;
       color: white;
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       display: flex;
       justify-content: flex-start;
-      gap: 1.5rem;
+      gap: 0.7rem;
     }
     .pages-container ul {
       max-height: 140px;
