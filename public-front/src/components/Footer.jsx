@@ -41,11 +41,11 @@ const Footer = () => {
           <div className="logos-container">
             <div className="logo">
               <Link
-                to="https://www.youtube.com/watch?v=EDK9KOfknTw"
+                to="https://www.youtube.com/@Georgianvendinggroup"
                 className="logo-icon"
                 target="_blank"
               >
-                <FontAwesomeIcon icon={faYoutube}/>
+                <FontAwesomeIcon icon={faYoutube} />
               </Link>
             </div>
             <div className="logo">

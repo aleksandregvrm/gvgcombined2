@@ -124,9 +124,9 @@ const Navbar = () => {
           <span>
             <Link
               target="_blank"
-              to="https://www.youtube.com/watch?v=EDK9KOfknTw"
+              to="https://www.youtube.com/@Georgianvendinggroup"
             >
-              <FaYoutube className="social-icon"/>
+              <FaYoutube className="social-icon" />
             </Link>
           </span>
           <span>
