@@ -2590,7 +2590,7 @@ width: 90%;
       flex-direction: column;
     }
     .money-slides-container h4{
-      font-weight: 600;
+      font-weight: 300;
     }
     /* end  */
     /* Downloads */

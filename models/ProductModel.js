@@ -15,12 +15,12 @@ const ProductSchema = new mongoose.Schema(
     description: {
       type: String,
       required: [true, "Please provide product description"],
-      maxlength: [1700, "Description can not be more than 1000 characters"],
+      maxlength: [1700, "Description can not be more than 1700 characters"],
     },
     descriptionGe: {
       type: String,
       required: [true, "Please provide product description in your mother tongue"],
-      maxlength: [1700, "Description can not be more than 1000 characters"],
+      maxlength: [1700, "Description can not be more than 1700 characters"],
     },
     likes :{
       type: Number,
