@@ -5,6 +5,8 @@ const path = require("path");
 const cloudinary = require("cloudinary").v2;
 const fs = require("fs");
 const axios = require("axios");
+const cleanCache = require('../utils/cache');
+
 
 const getAllProducts = async (req, res) => {
   const { search, productsType, sort } = req.query;
@@ -16,7 +18,6 @@ const getAllProducts = async (req, res) => {
   if (search) {
     queryObject.name = { $regex: search, $options: "i" };
   }
-
   let productsQuery = Product.find(queryObject);
   if (sort && sort !== "all") {
     if (sort === "a-z") {
@@ -36,7 +37,7 @@ const getAllProducts = async (req, res) => {
   const limit = Number(req.query.limit) || 6;
   const skip = (page - 1) * limit;
 
-  const products = await productsQuery.skip(skip).limit(limit);
+  const products = await productsQuery.skip(skip).limit(limit).cache({query:req.query});
 
   const filteredProducts = await products;
 
@@ -83,6 +84,8 @@ const getAllProductsAdmin = async (req, res) => {
 };
 const createProduct = async (req, res) => {
   const product = await Product.create(req.body);
+  const {category} = req.body;
+  cleanCache(category);
   res.status(StatusCodes.CREATED).json({ product: product });
 };
 const uploadImage = async (req, res) => {
@@ -117,6 +120,7 @@ const updateProduct = async (req, res) => {
 };
 const submitLikeProduct = async (req, res) => {
   const { id: productId } = req.params;
+  console.log('like product');
   const product = await Product.findOne({ _id: productId });
   if (!product) {
     throw new CustomError.NotFoundError(
