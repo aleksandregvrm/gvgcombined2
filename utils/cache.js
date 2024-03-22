@@ -1,8 +1,10 @@
 const mongoose = require("mongoose");
 const redis = require("redis");
+require('dotenv').config();
 
-const client = redis.createClient();
+const client = redis.createClient({url:process.env.REDIS_URL_EXTERNAL});
 const exec = mongoose.Query.prototype.exec;
+
 
 mongoose.Query.prototype.cache = function ({ query }) {
   this.useCache = true;
