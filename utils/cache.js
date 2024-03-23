@@ -22,7 +22,7 @@ mongoose.Query.prototype.exec = async function () {
   const cachedData = await client.hGet(hashName, key);
   if (cachedData) {
     const doc = JSON.parse(cachedData);
-    // await client.quit();
+    await client.disconnect();
     return Array.isArray(doc)
       ? doc.map((d) => new this.model(d))
       : new this.model(doc);
@@ -32,14 +32,14 @@ mongoose.Query.prototype.exec = async function () {
     EX: 300,
     NX: true,
   });
-  // await client.quit();
+  await client.disconnect();
   return result;
 };
 
 const cleanCache = async (key) => {
-  // await client.connect();
+  await client.connect();
   client.del(JSON.stringify(key));
-  // await client.quit();
+  await client.disconnect();
 };
 
 module.exports = cleanCache;
