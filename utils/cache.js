@@ -15,7 +15,7 @@ mongoose.Query.prototype.exec = async function () {
   if (!this.useCache) {
     return exec.apply(this, arguments);
   }
-  // await client.connect();
+  await client.connect();
   const additionalQueries = this.allQueries;
   const hashName = JSON.stringify(additionalQueries.productsType);
   const key = JSON.stringify(additionalQueries);
