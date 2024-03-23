@@ -15,14 +15,14 @@ mongoose.Query.prototype.exec = async function () {
   if (!this.useCache) {
     return exec.apply(this, arguments);
   }
-  await client.connect();
+  // await client.connect();
   const additionalQueries = this.allQueries;
   const hashName = JSON.stringify(additionalQueries.productsType);
   const key = JSON.stringify(additionalQueries);
   const cachedData = await client.hGet(hashName, key);
   if (cachedData) {
     const doc = JSON.parse(cachedData);
-    await client.quit();
+    // await client.quit();
     return Array.isArray(doc)
       ? doc.map((d) => new this.model(d))
       : new this.model(doc);
@@ -32,14 +32,14 @@ mongoose.Query.prototype.exec = async function () {
     EX: 300,
     NX: true,
   });
-  await client.quit();
+  // await client.quit();
   return result;
 };
 
 const cleanCache = async (key) => {
-  await client.connect();
+  // await client.connect();
   client.del(JSON.stringify(key));
-  await client.quit();
+  // await client.quit();
 };
 
 module.exports = cleanCache;
