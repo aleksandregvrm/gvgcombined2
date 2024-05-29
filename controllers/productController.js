@@ -37,7 +37,7 @@ const getAllProducts = async (req, res) => {
   const limit = Number(req.query.limit) || 6;
   const skip = (page - 1) * limit;
 
-  const products = await productsQuery.skip(skip).limit(limit).cache({query:req.query});
+  const products = await productsQuery.skip(skip).limit(limit);
 
   const filteredProducts = await products;
 
@@ -84,8 +84,6 @@ const getAllProductsAdmin = async (req, res) => {
 };
 const createProduct = async (req, res) => {
   const product = await Product.create(req.body);
-  const {category} = req.body;
-  cleanCache(category);
   res.status(StatusCodes.CREATED).json({ product: product });
 };
 const uploadImage = async (req, res) => {
@@ -120,7 +118,6 @@ const updateProduct = async (req, res) => {
 };
 const submitLikeProduct = async (req, res) => {
   const { id: productId } = req.params;
-  console.log('like product');
   const product = await Product.findOne({ _id: productId });
   if (!product) {
     throw new CustomError.NotFoundError(
@@ -147,13 +144,11 @@ const submitLikeProduct = async (req, res) => {
 };
 const deleteProduct = async (req, res) => {
   const { id: productId } = req.params;
-
   const product = await Product.findByIdAndDelete({ _id: productId });
 
   if (!product) {
     throw new CustomError.NotFoundError(`No product with id : ${productId}`);
   }
-
   res.status(StatusCodes.OK).json({ msg: "Success! Product removed." });
 };
 const getInstagram = async (req, res) => {
