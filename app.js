@@ -68,7 +68,6 @@ app.use(errorHandlerMiddleware);
 
 const port = 5002;
 const start = async () => {
-  console.log('Something');
   try {
     await connectDB(process.env.MONGO_URI);
     app.listen(port,() => {
@@ -79,4 +78,3 @@ const start = async () => {
   }
 };
 start();
-
